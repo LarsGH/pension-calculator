@@ -1,0 +1,7 @@
+logging:
+  level:
+    de.lasy: DEBUG
+
+pensionCalculator:
+  # Standard-Rentenalter
+  retirementAge: 67

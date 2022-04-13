@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 
 /**
- * Testet AtLeastAgoValidator.
+ * Testet {@link AtLeastYearsAgoValidator}.
  */
 public class AtLeastYearsAgoValidatorTest {
 

@@ -4,6 +4,9 @@ import javax.validation.Constraint;
 import javax.validation.Payload;
 import java.lang.annotation.*;
 
+/**
+ * Annotation legt fest, dass ein Datum mindestens X Jahre her sein muss.
+ */
 @Target({ ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = AtLeastYearsAgoValidator.class)
@@ -16,7 +19,7 @@ public @interface AtLeastYearsAgo {
 
     Class<? extends Payload>[] payload() default { };
 
-    /** The number of years ago (at least). */
+    /** Anzahl der Jahre, die ein Datum mindestens her sein soll. */
     int yearsAgo();
 
 }

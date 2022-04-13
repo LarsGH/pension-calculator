@@ -5,6 +5,9 @@ import de.lasy.pension.validation.custom.AtLeastYearsAgo;
 import javax.validation.Payload;
 import java.lang.annotation.Annotation;
 
+/**
+ * Mock für {@link AtLeastYearsAgo}.
+ */
 public class AtLeastAgoMock implements AtLeastYearsAgo {
 
     private final int yearsAgo;

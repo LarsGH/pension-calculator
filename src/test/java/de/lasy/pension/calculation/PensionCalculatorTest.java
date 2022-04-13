@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.time.LocalDate;
 
 /**
- * Testet PensionCalculator.
+ * Testet {@link PensionCalculator}.
  */
 @SpringBootTest
 public class PensionCalculatorTest {

@@ -10,6 +10,9 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
+/**
+ * Berechnet die Rente ({@link PensionCalculationResult}) aus Eingangsdaten ({@link PensionCalculationInput}).
+ */
 @Component
 public class PensionCalculator {
 
@@ -18,6 +21,12 @@ public class PensionCalculator {
     @Value("${pensionCalculator.retirementAge:67}")
     private int retirementAge;
 
+    /**
+     * Berechnet die Rente.
+     *
+     * @param calculationInput die Eingangsdaten zur Rentenberechnung
+     * @return berechnete Rente
+     */
     public PensionCalculationResult calculatePension(PensionCalculationInput calculationInput) {
         logger.info("Calculating pension with input: {}", calculationInput);
 

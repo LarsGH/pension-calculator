@@ -22,7 +22,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 /**
- * Testet PensionController.
+ * Testet {@link PensionController}.
  */
 @SpringBootTest
 @AutoConfigureMockMvc

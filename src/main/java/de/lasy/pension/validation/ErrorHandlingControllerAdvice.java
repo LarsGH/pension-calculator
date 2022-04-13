@@ -10,9 +10,17 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+/**
+ * Behandlung von Validierungsfehlern.
+ */
 @ControllerAdvice
 class ErrorHandlingControllerAdvice {
 
+    /**
+     * Gibt Validierungsfehler gesammelt zurück (sofern vorhanden).
+     * @param e Exception, welche die fehlerhaften Attribute beinhaltet
+     * @return Validierungsfehler
+     */
     @ExceptionHandler(MethodArgumentNotValidException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ResponseBody

@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 
+/**
+ * Stellt REST-Endpunkte für die Rente bereit.
+ */
 @RestController
 @RequestMapping("pension")
 public class PensionController {
@@ -26,11 +29,10 @@ public class PensionController {
         this.calculator = calculator;
     }
 
-    // TODO: Logging best practice?
     @PostMapping("/calculate")
     public PensionCalculationResult calculatePension(@Valid @RequestBody PensionCalculationInput calculationInput) {
         logger.info("pension/calculate requested with: {}", calculationInput);
-        // TODO: Validierung und Error-Handling!
+        // TODO: Validierung und Error-Handling! https://www.baeldung.com/exception-handling-for-rest-with-spring
         PensionCalculationResult result = calculator.calculatePension(calculationInput);
         return result;
     }

@@ -5,8 +5,12 @@ import javax.validation.ConstraintValidatorContext;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
+/**
+ * Validierung, dass ein Datum mindestens X Jahre her sein muss.
+ */
 class AtLeastYearsAgoValidator implements ConstraintValidator<AtLeastYearsAgo, LocalDate> {
 
+    /** Anzahl der Jahre, die ein Datum mindestens her sein soll. */
     private int atLeastYearsAgo;
 
     @Override

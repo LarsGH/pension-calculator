@@ -8,6 +8,7 @@ import java.time.LocalDate;
 public class PensionCalculationResult {
     /** Erwarteter Rentenbeginn. */
     private LocalDate expectedRetirementDate;
+
     /** Erwartete Monats-Rente (brutto). */
     private Double expectedPension;
 

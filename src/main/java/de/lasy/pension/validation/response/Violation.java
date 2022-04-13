@@ -1,5 +1,8 @@
 package de.lasy.pension.validation.response;
 
+/**
+ * Model für Validierungsfehler.
+ */
 public class Violation {
 
     private final String fieldName;

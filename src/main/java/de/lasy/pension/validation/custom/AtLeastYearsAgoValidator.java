@@ -26,10 +26,6 @@ class AtLeastYearsAgoValidator implements ConstraintValidator<AtLeastYearsAgo, L
 
         LocalDate today = LocalDate.now();
         long yearsAgo = date.until(today, ChronoUnit.YEARS);
-        if (yearsAgo < atLeastYearsAgo) {
-            return false;
-        }
-
-        return true;
+        return yearsAgo >= atLeastYearsAgo;
     }
 }

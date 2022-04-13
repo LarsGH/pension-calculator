@@ -16,7 +16,7 @@ import java.time.temporal.ChronoUnit;
 @Component
 public class PensionCalculator {
 
-    private static Logger logger = LoggerFactory.getLogger(PensionCalculator.class);
+    private static final Logger logger = LoggerFactory.getLogger(PensionCalculator.class);
 
     @Value("${pensionCalculator.retirementAge:67}")
     private int retirementAge;

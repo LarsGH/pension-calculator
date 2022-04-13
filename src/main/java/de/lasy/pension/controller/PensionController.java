@@ -20,10 +20,10 @@ import javax.validation.Valid;
 @RequestMapping("pension")
 public class PensionController {
 
-    private static Logger logger = LoggerFactory.getLogger(PensionController.class);
+    private static final Logger logger = LoggerFactory.getLogger(PensionController.class);
 
     @Autowired
-    private PensionCalculator calculator;
+    private final PensionCalculator calculator;
 
     public PensionController(PensionCalculator calculator) {
         this.calculator = calculator;
@@ -33,7 +33,6 @@ public class PensionController {
     public PensionCalculationResult calculatePension(@Valid @RequestBody PensionCalculationInput calculationInput) {
         logger.info("pension/calculate requested with: {}", calculationInput);
         // TODO: Validierung und Error-Handling! https://www.baeldung.com/exception-handling-for-rest-with-spring
-        PensionCalculationResult result = calculator.calculatePension(calculationInput);
-        return result;
+        return calculator.calculatePension(calculationInput);
     }
 }

@@ -73,7 +73,7 @@ public class PensionControllerTest {
     }
 
     @Test
-    public void invalidDataResponseForDatesInFuture() throws Exception {
+    public void invalidDataResponseForDateOfBirthInFuture() throws Exception {
         PensionCalculationInput requestInput = validInput();
         LocalDate futureDate = LocalDate.now().plusDays(1);
         requestInput.setDateOfWorkStart(futureDate);
@@ -83,8 +83,7 @@ public class PensionControllerTest {
         ResultActions result = performPostPensionCalculateWithContent(requestJson);
 
         expectResponseWithValidationErrors(result, List.of(
-                new Violation("dateOfBirth", "Muss mindestens 16 Jahre her sein"),
-                new Violation("dateOfWorkStart", "must be a past date")));
+                new Violation("dateOfBirth", "Muss mindestens 16 Jahre her sein")));
     }
 
     @Test

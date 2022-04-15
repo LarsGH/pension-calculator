@@ -17,7 +17,6 @@ public class PensionCalculationInput {
     private LocalDate dateOfBirth;
 
     /** Arbeitsbeginn. */
-    @Past
     @NotNull
     private LocalDate dateOfWorkStart;
 

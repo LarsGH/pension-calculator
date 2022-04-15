@@ -13,7 +13,7 @@ import java.lang.annotation.*;
 @Documented
 public @interface AtLeastYearsAgo {
 
-    String message() default "Muss mindestens {yearsAgo} Jahre her sein";
+    String message() default "{validation.atLeastYearsAgo}";
 
     Class<?>[] groups() default { };
 

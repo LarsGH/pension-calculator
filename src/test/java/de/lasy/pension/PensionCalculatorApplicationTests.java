@@ -9,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class PensionCalculatorApplicationTests {
 
+	@SuppressWarnings("EmptyMethod")
 	@Test
 	void contextLoads() {
 	}

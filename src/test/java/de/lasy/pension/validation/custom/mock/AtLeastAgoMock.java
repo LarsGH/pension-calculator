@@ -8,6 +8,7 @@ import java.lang.annotation.Annotation;
 /**
  * Mock für {@link AtLeastYearsAgo}.
  */
+@SuppressWarnings("ClassExplicitlyAnnotation")
 public class AtLeastAgoMock implements AtLeastYearsAgo {
 
     private final int yearsAgo;
@@ -26,6 +27,7 @@ public class AtLeastAgoMock implements AtLeastYearsAgo {
         return new Class[0];
     }
 
+    @SuppressWarnings("unchecked")
     @Override
     public Class<? extends Payload>[] payload() {
         return new Class[0];

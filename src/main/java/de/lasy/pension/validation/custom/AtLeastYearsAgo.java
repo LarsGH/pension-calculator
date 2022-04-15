@@ -7,6 +7,7 @@ import java.lang.annotation.*;
 /**
  * Annotation legt fest, dass ein Datum mindestens X Jahre her sein muss.
  */
+@SuppressWarnings("SameReturnValue")
 @Target({ ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = AtLeastYearsAgoValidator.class)

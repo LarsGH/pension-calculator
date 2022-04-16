@@ -2,6 +2,10 @@ logging:
   level:
     de.lasy: DEBUG
 
+server:
+  error:
+    include-message: ALWAYS
+
 pensionCalculator:
   # Standard-Rentenalter
   retirementAge: 67

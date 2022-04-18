@@ -53,9 +53,9 @@ public class PensionCalculator {
         return retirementDate;
     }
 
-    /** Grenzjahr für das Geburtsjahr, bis welches die Rente noch mit 66 Jahren möglich ist. */
+    /** Grenze für das Geburtsjahr, bis welches die Rente noch mit 66 Jahren möglich ist. */
     static final int PENSION_WITH_66_THRESHOLD_YEAR = 1958;
-    /** Vorzeitiges Rentenalter für die Geburtsjahre älter gleich 1958 */
+    /** Vorzeitiges Rentenalter für die Geburtsjahre älter gleich 1958. */
     static final int PENSION_66 = 66;
 
     int calculatePensionAge(LocalDate dateOfBirth) {
